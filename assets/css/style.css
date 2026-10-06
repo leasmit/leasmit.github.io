@@ -311,6 +311,7 @@ img {
   color: var(--primary);
   margin-bottom: 0.5rem;
   line-height: 1.35;
+  text-align: center;
 }
 
 .profile-affiliation {
@@ -318,6 +319,7 @@ img {
   color: var(--text-secondary);
   line-height: 1.45;
   margin-bottom: 0.75rem;
+  text-align: center;
 }
 
 .profile-location {
@@ -421,6 +423,32 @@ p {
   line-height: 1.65;
   margin-bottom: 1.15rem;
   color: var(--text-secondary);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+/* Floated image layout for text wrap */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.msc-float-img {
+  float: right;
+  width: 440px;
+  height: 270px;
+  margin: 0.25rem 0 1.25rem 1.75rem;
+}
+
+@media (max-width: 768px) {
+  .msc-float-img {
+    float: none;
+    width: 100%;
+    height: 240px;
+    margin: 1.25rem 0;
+  }
 }
 
 /* ==========================================================================
