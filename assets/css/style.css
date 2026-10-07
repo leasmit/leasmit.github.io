@@ -101,6 +101,10 @@ body {
   flex-direction: column;
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 a {
@@ -325,6 +329,8 @@ img {
 .profile-location {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 0.35rem;
   font-size: 0.825rem;
   color: var(--text-muted);
@@ -392,6 +398,7 @@ img {
   font-size: 1.1rem;
   color: var(--text-muted);
   max-width: 760px;
+  text-align: left;
 }
 
 .section-heading {
@@ -425,7 +432,28 @@ p {
   color: var(--text-secondary);
   text-align: justify;
   text-justify: inter-word;
+  text-align-last: left;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
   hyphens: auto;
+}
+
+/* Headings, tags, badges, and interface controls should never hyphenate */
+h1, h2, h3, h4, h5, h6,
+.nav-links,
+.card-tag,
+.badge-pill,
+.skill-tag,
+.btn,
+.profile-title,
+.profile-affiliation,
+.profile-location,
+.site-footer {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 
 /* Floated image layout for text wrap */
@@ -789,6 +817,11 @@ a.btn-primary:hover {
   padding: 2.25rem 1.5rem;
   font-size: 0.875rem;
   color: var(--text-muted);
+}
+
+.site-footer p {
+  text-align: left;
+  margin-bottom: 0;
 }
 
 .footer-container {
